@@ -1,7 +1,7 @@
-import 'package:animate_do/animate_do.dart';
-import 'package:expanding_cards/provider/provider.dart';
 import 'package:flutter/material.dart';
+
 import 'package:provider/provider.dart';
+import 'package:expanding_cards/provider/provider.dart';
 
 class Cards extends StatelessWidget {
   final int index;

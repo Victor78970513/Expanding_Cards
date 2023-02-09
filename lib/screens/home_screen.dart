@@ -1,7 +1,6 @@
-import 'package:expanding_cards/provider/provider.dart';
-import 'package:expanding_cards/widgets/cards.dart';
 import 'package:flutter/material.dart';
-import 'package:provider/provider.dart';
+
+import 'package:expanding_cards/widgets/cards.dart';
 
 class HomeScreen extends StatefulWidget {
   @override
@@ -9,13 +8,11 @@ class HomeScreen extends StatefulWidget {
 }
 
 class _HomeScreenState extends State<HomeScreen> {
-  double _height = 50.0;
   @override
   Widget build(BuildContext context) {
-    final numero = Provider.of<GetterProvider>(context).index;
     return Scaffold(
       appBar: AppBar(
-        title: Text('Expanding Cards'),
+        title: const Text('Expanding Cards'),
       ),
       body: Center(
         child: Column(
@@ -31,45 +28,4 @@ class _HomeScreenState extends State<HomeScreen> {
       ),
     );
   }
-
-  void changeShape() {
-    _height = 100;
-    setState(() {});
-  }
 }
-
-
-
-
-
-
-
-
-
-
-
-
-    // int numero = Provider.of<IndexProvider>(context).index;
-    // return AnimatedBuilder(
-    //   animation:
-    //       Listenable.merge([_animationController, _secondAnimationController]),
-    //   builder: (context, _) {
-    //     return Scaffold(
-    //       appBar: AppBar(
-    //         title: const Text('Expanding Cards'),
-    //       ),
-    // body: ListView.builder(
-    //   itemCount: imagenes.length,
-    //   itemBuilder: (context, int index) {
-    //     numero = index;
-    //     return Cards(
-    //       imagenes[index],
-    //       titulos[index],
-    //       _animationUp,
-    //       () {
-    //         _secondAnimationController.forward();
-    //         _animationController.forward();
-    //       },
-    //     );
-    //   },
-    // ),
