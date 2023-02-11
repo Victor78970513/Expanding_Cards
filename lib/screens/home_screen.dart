@@ -1,6 +1,8 @@
+import 'package:expanding_cards/screens/expanding_cards_screen.dart';
 import 'package:flutter/material.dart';
 
-import 'package:expanding_cards/widgets/cards.dart';
+import 'package:expanding_cards/widgets/main_button.dart';
+import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 
 class HomeScreen extends StatefulWidget {
   @override
@@ -11,18 +13,128 @@ class _HomeScreenState extends State<HomeScreen> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      backgroundColor: Colors.grey[900],
       appBar: AppBar(
-        title: const Text('Expanding Cards'),
+        backgroundColor: Color(0xff007AFF),
+        title: const Text('Animations'),
       ),
       body: Center(
         child: Column(
-          mainAxisAlignment: MainAxisAlignment.center,
-          children: const [
-            Cards(0),
-            Cards(1),
-            Cards(2),
-            Cards(3),
-            Cards(4),
+          children: [
+            Row(
+              mainAxisAlignment: MainAxisAlignment.center,
+              children: [
+                MainButton(
+                  icon: const FaIcon(FontAwesomeIcons.maximize),
+                  title: 'Expanding Cards',
+                  color: const Color(0xffFF7043),
+                  onPressed: () {
+                    Navigator.push(
+                        context,
+                        MaterialPageRoute(
+                            builder: (_) => ExpandingCardsScreen()));
+                  },
+                ),
+                MainButton(
+                  icon: FaIcon(FontAwesomeIcons.maximize),
+                  title: 'Expanding Cards',
+                  color: Color(0xffFF7043),
+                  onPressed: () {
+                    Navigator.push(
+                        context,
+                        MaterialPageRoute(
+                            builder: (_) => ExpandingCardsScreen()));
+                  },
+                ),
+                MainButton(
+                  icon: FaIcon(FontAwesomeIcons.maximize),
+                  title: 'Expanding Cards',
+                  color: Color(0xffFF7043),
+                  onPressed: () {
+                    Navigator.push(
+                        context,
+                        MaterialPageRoute(
+                            builder: (_) => ExpandingCardsScreen()));
+                  },
+                ),
+              ],
+            ),
+            Row(
+              mainAxisAlignment: MainAxisAlignment.center,
+              children: [
+                MainButton(
+                  icon: FaIcon(FontAwesomeIcons.maximize),
+                  title: 'Expanding Cards',
+                  color: Color(0xffFF7043),
+                  onPressed: () {
+                    Navigator.push(
+                        context,
+                        MaterialPageRoute(
+                            builder: (_) => ExpandingCardsScreen()));
+                  },
+                ),
+                MainButton(
+                  icon: FaIcon(FontAwesomeIcons.maximize),
+                  title: 'Expanding Cards',
+                  color: Color(0xffFF7043),
+                  onPressed: () {
+                    Navigator.push(
+                        context,
+                        MaterialPageRoute(
+                            builder: (_) => ExpandingCardsScreen()));
+                  },
+                ),
+                MainButton(
+                  icon: FaIcon(FontAwesomeIcons.maximize),
+                  title: 'Expanding Cards',
+                  color: Color(0xffFF7043),
+                  onPressed: () {
+                    Navigator.push(
+                        context,
+                        MaterialPageRoute(
+                            builder: (_) => ExpandingCardsScreen()));
+                  },
+                ),
+              ],
+            ),
+            Row(
+              mainAxisAlignment: MainAxisAlignment.center,
+              children: [
+                MainButton(
+                  icon: FaIcon(FontAwesomeIcons.maximize),
+                  title: 'Expanding Cards',
+                  color: Color(0xffFF7043),
+                  onPressed: () {
+                    Navigator.push(
+                        context,
+                        MaterialPageRoute(
+                            builder: (_) => ExpandingCardsScreen()));
+                  },
+                ),
+                MainButton(
+                  icon: FaIcon(FontAwesomeIcons.maximize),
+                  title: 'Expanding Cards',
+                  color: Color(0xffFF7043),
+                  onPressed: () {
+                    Navigator.push(
+                        context,
+                        MaterialPageRoute(
+                            builder: (_) => ExpandingCardsScreen()));
+                  },
+                ),
+                MainButton(
+                  icon: FaIcon(FontAwesomeIcons.maximize),
+                  title: 'Expanding Cards',
+                  color: Color(0xffFF7043),
+                  onPressed: () {
+                    Navigator.push(
+                        context,
+                        MaterialPageRoute(
+                            builder: (_) => ExpandingCardsScreen()));
+                  },
+                ),
+              ],
+            ),
           ],
         ),
       ),
