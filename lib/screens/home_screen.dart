@@ -1,4 +1,5 @@
 import 'package:expanding_cards/screens/expanding_cards_screen.dart';
+import 'package:expanding_cards/screens/progress_bar_screen.dart';
 import 'package:flutter/material.dart';
 
 import 'package:expanding_cards/widgets/main_button.dart';
@@ -36,14 +37,16 @@ class _HomeScreenState extends State<HomeScreen> {
                   },
                 ),
                 MainButton(
-                  icon: FaIcon(FontAwesomeIcons.maximize),
-                  title: 'Expanding Cards',
-                  color: Color(0xffFF7043),
+                  icon: const FaIcon(FontAwesomeIcons.percent),
+                  title: 'Progres Bar',
+                  color: const Color(0xffFFE082),
                   onPressed: () {
                     Navigator.push(
                         context,
                         MaterialPageRoute(
-                            builder: (_) => ExpandingCardsScreen()));
+                            builder: (_) => ProgressBarScreen(
+                                  porcentaje: 100,
+                                )));
                   },
                 ),
                 MainButton(

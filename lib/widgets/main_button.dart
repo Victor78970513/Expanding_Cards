@@ -35,7 +35,7 @@ class MainButton extends StatelessWidget {
         Text(
           title,
           style: const TextStyle(
-              color: Colors.white, fontWeight: FontWeight.bold, fontSize: 10),
+              color: Colors.white, fontWeight: FontWeight.bold, fontSize: 14),
         )
       ],
     );
