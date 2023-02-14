@@ -16,7 +16,7 @@ class _HomeScreenState extends State<HomeScreen> {
     return Scaffold(
       backgroundColor: Colors.grey[900],
       appBar: AppBar(
-        backgroundColor: Color(0xff007AFF),
+        backgroundColor: const Color(0xff007AFF),
         title: const Text('Animations'),
       ),
       body: Center(

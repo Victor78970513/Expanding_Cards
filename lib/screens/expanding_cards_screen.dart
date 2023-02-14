@@ -11,6 +11,11 @@ class _ExpandingCardsScreenState extends State<ExpandingCardsScreen> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      backgroundColor: Colors.grey[900],
+      appBar: AppBar(
+        title: const Text('Expanding Cards'),
+        backgroundColor: const Color(0xff007AFF),
+      ),
       body: Column(
         mainAxisAlignment: MainAxisAlignment.center,
         children: const [

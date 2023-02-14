@@ -8,6 +8,12 @@ class ProgressBarScreen extends StatelessWidget {
   Widget build(BuildContext context) {
     final posicion = Provider.of<GetterProvider>(context);
     return Scaffold(
+      backgroundColor: Colors.grey[900],
+      appBar: AppBar(
+        title: const Text('Progress By Steps'),
+        backgroundColor: const Color(0xff007AFF),
+        // backgroundColor: ,
+      ),
       body: Center(
         child: Column(
           mainAxisAlignment: MainAxisAlignment.center,
