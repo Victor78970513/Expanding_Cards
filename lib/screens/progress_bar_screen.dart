@@ -18,58 +18,94 @@ class ProgressBarScreen extends StatelessWidget {
       ),
       body: Column(
         mainAxisAlignment: MainAxisAlignment.center,
-        children: [
-          Row(
-            mainAxisAlignment: MainAxisAlignment.center,
-            children: const [
-              CustomContainer(
-                isVisible: false,
-                index: 1,
-                texto: '1',
-              ),
-              CustomContainer(
-                isVisible: true,
-                index: 2,
-                texto: '2',
-              ),
-              CustomContainer(
-                isVisible: true,
-                index: 3,
-                texto: '3',
-              ),
-              CustomContainer(
-                isVisible: true,
-                index: 4,
-                texto: '4',
-              ),
-            ],
+        children: const [
+          _ProgressBar(
+            color: Colors.blue,
           ),
-          const SizedBox(height: 50),
-          Row(
-            children: [
-              const Spacer(),
-              CustomButton(
-                string: 'Prev',
-                onPressed: () {
-                  final posicion =
-                      Provider.of<GetterProvider>(context, listen: false);
-                  posicion.indexPorPintar = posicion.indexPorPintar - 1;
-                },
-              ),
-              const Spacer(),
-              CustomButton(
-                string: 'Next',
-                onPressed: () {
-                  final posicion =
-                      Provider.of<GetterProvider>(context, listen: false);
-                  posicion.indexPorPintar = posicion.indexPorPintar + 1;
-                },
-              ),
-              const Spacer(),
-            ],
-          )
+          SizedBox(height: 50),
+          _Buttons(),
+          SizedBox(height: 100),
+          _ProgressBar(
+            color: Colors.purple,
+          ),
+          SizedBox(height: 50),
+          _Buttons(),
         ],
       ),
+    );
+  }
+}
+
+class _Buttons extends StatelessWidget {
+  const _Buttons({
+    Key? key,
+  }) : super(key: key);
+
+  @override
+  Widget build(BuildContext context) {
+    return Row(
+      children: [
+        const Spacer(),
+        CustomButton(
+          string: 'Prev',
+          onPressed: () {
+            final posicion =
+                Provider.of<GetterProvider>(context, listen: false);
+            posicion.indexPorPintar = posicion.indexPorPintar - 1;
+          },
+        ),
+        const Spacer(),
+        CustomButton(
+          string: 'Next',
+          onPressed: () {
+            final posicion =
+                Provider.of<GetterProvider>(context, listen: false);
+            posicion.indexPorPintar = posicion.indexPorPintar + 1;
+          },
+        ),
+        const Spacer(),
+      ],
+    );
+  }
+}
+
+class _ProgressBar extends StatelessWidget {
+  final Color color;
+  const _ProgressBar({
+    Key? key,
+    required this.color,
+  }) : super(key: key);
+
+  @override
+  Widget build(BuildContext context) {
+    return Row(
+      mainAxisAlignment: MainAxisAlignment.center,
+      children: [
+        CustomContainer(
+          isVisible: false,
+          index: 1,
+          texto: '1',
+          color: color,
+        ),
+        CustomContainer(
+          isVisible: true,
+          index: 2,
+          texto: '2',
+          color: color,
+        ),
+        CustomContainer(
+          isVisible: true,
+          index: 3,
+          texto: '3',
+          color: color,
+        ),
+        CustomContainer(
+          isVisible: true,
+          index: 4,
+          texto: '4',
+          color: color,
+        ),
+      ],
     );
   }
 }

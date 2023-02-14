@@ -6,12 +6,14 @@ class CustomContainer extends StatefulWidget {
   final bool isVisible;
   final int index;
   final String texto;
+  final Color color;
 
   const CustomContainer(
       {super.key,
       required this.isVisible,
       required this.index,
-      required this.texto});
+      required this.texto,
+      required this.color});
 
   @override
   State<CustomContainer> createState() => _CustomContainerState();
@@ -28,20 +30,26 @@ class _CustomContainerState extends State<CustomContainer> {
           AnimatedContainer(
             height: 5,
             width: 35,
-            color: posicion >= widget.index ? Colors.blue : Colors.grey,
+            color: posicion >= widget.index ? widget.color : Colors.grey,
             duration: const Duration(milliseconds: 500),
           ),
-        CircleStep(posicion: posicion, widget: widget),
+        CircleStep(
+          posicion: posicion,
+          widget: widget,
+          color: widget.color,
+        ),
       ],
     );
   }
 }
 
 class CircleStep extends StatelessWidget {
+  final Color color;
   const CircleStep({
     Key? key,
     required this.posicion,
     required this.widget,
+    required this.color,
   }) : super(key: key);
 
   final int posicion;
@@ -56,7 +64,7 @@ class CircleStep extends StatelessWidget {
           width: 50,
           decoration: BoxDecoration(
             shape: BoxShape.circle,
-            color: posicion >= widget.index ? Colors.blue : Colors.grey,
+            color: posicion >= widget.index ? color : Colors.grey,
           ),
           duration: const Duration(milliseconds: 500),
         ),
