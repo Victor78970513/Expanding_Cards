@@ -1,9 +1,9 @@
-import 'package:expanding_cards/screens/expanding_cards_screen.dart';
-import 'package:expanding_cards/screens/progress_bar_screen.dart';
 import 'package:flutter/material.dart';
 
-import 'package:expanding_cards/widgets/main_button.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
+
+import 'package:expanding_cards/screens/screens.dart';
+import 'package:expanding_cards/widgets/widgets.dart';
 
 class HomeScreen extends StatefulWidget {
   @override
@@ -46,14 +46,14 @@ class _HomeScreenState extends State<HomeScreen> {
                   },
                 ),
                 MainButton(
-                  icon: FaIcon(FontAwesomeIcons.maximize),
-                  title: 'Expanding Cards',
-                  color: Color(0xffFF7043),
+                  icon: const FaIcon(FontAwesomeIcons.rotate),
+                  title: 'Rotate Navigation',
+                  color: const Color(0xffFF7043),
                   onPressed: () {
                     Navigator.push(
                         context,
                         MaterialPageRoute(
-                            builder: (_) => ExpandingCardsScreen()));
+                            builder: (_) => RotationNavigationScreen()));
                   },
                 ),
               ],

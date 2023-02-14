@@ -21,10 +21,7 @@ class MainButton extends StatelessWidget {
           margin: const EdgeInsets.all(30),
           height: 65,
           width: 65,
-          decoration: BoxDecoration(
-            color: color,
-            borderRadius: BorderRadius.circular(90),
-          ),
+          decoration: BoxDecoration(color: color, shape: BoxShape.circle),
           child: IconButton(
             onPressed: onPressed,
             icon: icon,

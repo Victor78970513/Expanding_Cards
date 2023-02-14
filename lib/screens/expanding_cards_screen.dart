@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 
-import 'package:expanding_cards/widgets/cards.dart';
+import 'package:expanding_cards/widgets/widgets.dart';
 
 class ExpandingCardsScreen extends StatefulWidget {
   @override
