@@ -41,12 +41,8 @@ class _HomeScreenState extends State<HomeScreen> {
                   title: 'Progres Bar',
                   color: const Color(0xffFFE082),
                   onPressed: () {
-                    Navigator.push(
-                        context,
-                        MaterialPageRoute(
-                            builder: (_) => ProgressBarScreen(
-                                  porcentaje: 100,
-                                )));
+                    Navigator.push(context,
+                        MaterialPageRoute(builder: (_) => ProgressBarScreen()));
                   },
                 ),
                 MainButton(
