@@ -1,8 +1,15 @@
 import 'package:flutter/material.dart';
 
-class RotationNavigationScreen extends StatelessWidget {
+class RotationNavigationScreen extends StatefulWidget {
+  @override
+  State<RotationNavigationScreen> createState() =>
+      _RotationNavigationScreenState();
+}
+
+class _RotationNavigationScreenState extends State<RotationNavigationScreen> {
   @override
   Widget build(BuildContext context) {
+    int contador = 0;
     return Scaffold(
       backgroundColor: Colors.grey[900],
       appBar: AppBar(
@@ -10,14 +17,20 @@ class RotationNavigationScreen extends StatelessWidget {
         backgroundColor: const Color(0xff007AFF),
         actions: [
           IconButton(
-              onPressed: () {},
+              onPressed: () {
+                contador = 15;
+                print(contador);
+                setState(() {});
+              },
               icon: const Icon(
                 Icons.list,
                 size: 25,
               ))
         ],
       ),
-      body: Center(
+      body: AnimatedContainer(
+        duration: const Duration(milliseconds: 300),
+        transform: Matrix4.identity()..rotateZ(contador * 3.14 / 180),
         child: Padding(
           padding: const EdgeInsets.only(left: 15, top: 25),
           child: Column(
