@@ -5,12 +5,7 @@ import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 import 'package:expanding_cards/screens/screens.dart';
 import 'package:expanding_cards/widgets/widgets.dart';
 
-class HomeScreen extends StatefulWidget {
-  @override
-  State<HomeScreen> createState() => _HomeScreenState();
-}
-
-class _HomeScreenState extends State<HomeScreen> {
+class HomeScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -62,14 +57,14 @@ class _HomeScreenState extends State<HomeScreen> {
               mainAxisAlignment: MainAxisAlignment.center,
               children: [
                 MainButton(
-                  icon: FaIcon(FontAwesomeIcons.maximize),
-                  title: 'Expanding Cards',
+                  icon: FaIcon(FontAwesomeIcons.square),
+                  title: 'Flutter Bloc',
                   color: Color(0xffFF7043),
                   onPressed: () {
                     Navigator.push(
                         context,
                         MaterialPageRoute(
-                            builder: (_) => ExpandingCardsScreen()));
+                            builder: (_) => RotationNavigationScreen()));
                   },
                 ),
                 MainButton(
