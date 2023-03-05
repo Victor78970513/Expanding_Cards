@@ -18,7 +18,7 @@ https://user-images.githubusercontent.com/104875404/222975071-675a5d13-a8de-4cfb
 3. Run the app on an emulator or physical device.
 
 <p float="left">
-<img src="web/icons/image_1.jpeg" width="35%" height="50%">
-<img src="web/icons/image_2.jpeg" width="35%" height="50%">
-<img src="web/icons/image_3.jpeg" width="35%" height="50%">
-<img src="web/icons/image_4.jpeg" width="35%" height="50%">
+<img src="web/icons/image_1.jpeg" width="35%" height="35%">
+<img src="web/icons/image_2.jpeg" width="35%" height="35%">
+<img src="web/icons/image_3.jpeg" width="35%" height="35%">
+<img src="web/icons/image_4.jpeg" width="35%" height="35%">
