@@ -22,3 +22,7 @@ https://user-images.githubusercontent.com/104875404/222975071-675a5d13-a8de-4cfb
 <img src="web/icons/image_2.jpeg" width="35%" height="35%">
 <img src="web/icons/image_3.jpeg" width="35%" height="35%">
 <img src="web/icons/image_4.jpeg" width="35%" height="35%">
+
+## Contributing
+
+Contributions are always welcome! If you have any ideas or suggestions, please create a GitHub issue or submit a pull request.
