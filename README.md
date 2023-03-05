@@ -4,6 +4,7 @@ Some basic animation samples to practice
 
 ## Demo
 
+https://user-images.githubusercontent.com/104875404/222975071-675a5d13-a8de-4cfb-a888-f64f291c7f45.mp4
 
 ## Feature Roadmap
 - Add more animation
