@@ -6,6 +6,8 @@ import 'package:expanding_cards/screens/screens.dart';
 import 'package:expanding_cards/widgets/widgets.dart';
 
 class HomeScreen extends StatelessWidget {
+  const HomeScreen({super.key});
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -57,74 +59,14 @@ class HomeScreen extends StatelessWidget {
               mainAxisAlignment: MainAxisAlignment.center,
               children: [
                 MainButton(
-                  icon: FaIcon(FontAwesomeIcons.square),
-                  title: 'Flutter Bloc',
-                  color: Color(0xffFF7043),
+                  icon: const FaIcon(FontAwesomeIcons.square),
+                  title: 'Rotate Navigation',
+                  color: const Color(0xffFF7043),
                   onPressed: () {
                     Navigator.push(
                         context,
                         MaterialPageRoute(
                             builder: (_) => RotationNavigationScreen()));
-                  },
-                ),
-                MainButton(
-                  icon: FaIcon(FontAwesomeIcons.maximize),
-                  title: 'Expanding Cards',
-                  color: Color(0xffFF7043),
-                  onPressed: () {
-                    Navigator.push(
-                        context,
-                        MaterialPageRoute(
-                            builder: (_) => ExpandingCardsScreen()));
-                  },
-                ),
-                MainButton(
-                  icon: FaIcon(FontAwesomeIcons.maximize),
-                  title: 'Expanding Cards',
-                  color: Color(0xffFF7043),
-                  onPressed: () {
-                    Navigator.push(
-                        context,
-                        MaterialPageRoute(
-                            builder: (_) => ExpandingCardsScreen()));
-                  },
-                ),
-              ],
-            ),
-            Row(
-              mainAxisAlignment: MainAxisAlignment.center,
-              children: [
-                MainButton(
-                  icon: FaIcon(FontAwesomeIcons.maximize),
-                  title: 'Expanding Cards',
-                  color: Color(0xffFF7043),
-                  onPressed: () {
-                    Navigator.push(
-                        context,
-                        MaterialPageRoute(
-                            builder: (_) => ExpandingCardsScreen()));
-                  },
-                ),
-                MainButton(
-                  icon: FaIcon(FontAwesomeIcons.maximize),
-                  title: 'Expanding Cards',
-                  color: Color(0xffFF7043),
-                  onPressed: () {
-                    Navigator.push(
-                        context,
-                        MaterialPageRoute(
-                            builder: (_) => ExpandingCardsScreen()));
-                  },
-                ),
-                MainButton(
-                  icon: FaIcon(FontAwesomeIcons.maximize),
-                  title: 'Expanding Cards',
-                  color: Color(0xffFF7043),
-                  onPressed: () {
-                    Navigator.push(
-                        context,
-                        MaterialPageRoute(
-                            builder: (_) => ExpandingCardsScreen()));
                   },
                 ),
               ],
