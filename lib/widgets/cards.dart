@@ -28,6 +28,10 @@ class Cards extends StatelessWidget {
       'City on Winter',
       'Mountains - Clouds'
     ];
+
+    AssetImage(images[index])
+        .resolve(const ImageConfiguration())
+        .addListener(ImageStreamListener((_, __) {}));
     return GestureDetector(
       onTap: () {
         final numero = Provider.of<GetterProvider>(context, listen: false);
