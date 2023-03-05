@@ -19,57 +19,34 @@ class HomeScreen extends StatelessWidget {
       body: Center(
         child: Column(
           children: [
-            Row(
-              mainAxisAlignment: MainAxisAlignment.center,
-              children: [
-                MainButton(
-                  icon: const FaIcon(FontAwesomeIcons.maximize),
-                  title: 'Expanding Cards',
-                  color: const Color(0xffFF7043),
-                  onPressed: () {
-                    Navigator.push(
-                        context,
-                        MaterialPageRoute(
-                            builder: (_) => ExpandingCardsScreen()));
-                  },
-                ),
-                MainButton(
-                  icon: const FaIcon(FontAwesomeIcons.percent),
-                  title: 'Progres Bar',
-                  color: const Color(0xffFFE082),
-                  onPressed: () {
-                    Navigator.push(context,
-                        MaterialPageRoute(builder: (_) => ProgressBarScreen()));
-                  },
-                ),
-                MainButton(
-                  icon: const FaIcon(FontAwesomeIcons.rotate),
-                  title: 'Rotate Navigation',
-                  color: const Color(0xffFF7043),
-                  onPressed: () {
-                    Navigator.push(
-                        context,
-                        MaterialPageRoute(
-                            builder: (_) => RotationNavigationScreen()));
-                  },
-                ),
-              ],
+            MainButton(
+              icon: const FaIcon(FontAwesomeIcons.maximize),
+              title: 'Expanding Cards',
+              color: const Color(0xffFF7043),
+              onPressed: () {
+                Navigator.push(context,
+                    MaterialPageRoute(builder: (_) => ExpandingCardsScreen()));
+              },
             ),
-            Row(
-              mainAxisAlignment: MainAxisAlignment.center,
-              children: [
-                MainButton(
-                  icon: const FaIcon(FontAwesomeIcons.square),
-                  title: 'Rotate Navigation',
-                  color: const Color(0xffFF7043),
-                  onPressed: () {
-                    Navigator.push(
-                        context,
-                        MaterialPageRoute(
-                            builder: (_) => RotationNavigationScreen()));
-                  },
-                ),
-              ],
+            MainButton(
+              icon: const FaIcon(FontAwesomeIcons.percent),
+              title: 'Progres Bar',
+              color: const Color(0xffFFE082),
+              onPressed: () {
+                Navigator.push(context,
+                    MaterialPageRoute(builder: (_) => ProgressBarScreen()));
+              },
+            ),
+            MainButton(
+              icon: const FaIcon(FontAwesomeIcons.rotate),
+              title: 'Rotate Navigation',
+              color: const Color(0xffFF7043),
+              onPressed: () {
+                Navigator.push(
+                    context,
+                    MaterialPageRoute(
+                        builder: (_) => RotationNavigationScreen()));
+              },
             ),
           ],
         ),
